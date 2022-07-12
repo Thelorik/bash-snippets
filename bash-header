@@ -1,0 +1,38 @@
+#!/bin/bash
+## # # # #	####
+
+## # #	Project Goal
+
+## Project Scope
+#
+###
+## License on Read/Write :: License GPL 3.0 @ https://www.gnu.org/licenses/gpl-3.0.html
+##
+## Style is :###:: comment line start : # :: capability :###:: code start
+####	:: End of Header
+# #	"excluded code"
+
+echo "$BASH_SOURCE"
+cat "$BASH_SOURCE" | grep " # " | grep -v grep | awk '{print $0, "\n"}'
+
+exit 0 # #	Test protection point
+
+###
+## This doesn't do anything. Useful to point at the main function
+ # Under the Design Spec this will print out as documentation
+# This also doesn't do anything. Useful as a paragraph-style subheader.
+###
+
+echo "Hello, World!" # #	Following the Design Spec, this will print
+
+###
+# #	And this will not.
+###
+
+echo "Hello, Env!"	#	At least until the test point is removed.
+
+###
+# There is an implied newline before and after code and the file itself is
+# line-by line defining of the following. Almost none of the overspecified
+# style requirements are expected to be followed but ought to be such that
+# grep/sed/awk/perl, et-al can fizzbuzz the file to your liking.
